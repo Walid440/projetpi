@@ -1,0 +1,52 @@
+<B><p style="text-align-last: center; color: blue;">update Feedback</B>
+<form  (ngSubmit)="updateRow()">
+      
+         <table class="table table-striped table-hover "  style="text-align-last: center;"  >
+     
+        <tbody>
+            
+<tr>
+    
+    <td style="width: 69%; height: 5%; align-content: right;"  ></td>
+   <td> <div class="form-group">
+   
+    <label>id</label>   <input type="text" class="form-control" id="idd" [(ngModel)]="Feedback.id"
+          name="idd"  >
+    </div>
+    <div class="form-group">
+   
+         <input hidden type="text" class="form-control" id="idCat" [(ngModel)]="Feedback.companies.id"
+              name="idCat"  >
+        </div>
+        <div class="form-group">
+   
+             <input  hidden type="text" class="form-control" id="idCat" [(ngModel)]="Feedback.companies.name"
+                  name="idCat"  >
+            </div>
+    <div class="form-group">
+        <label>Companies</label>
+    
+                             
+            <select class="form-control form-control-lg" id="idCat" name="idCat" [(ngModel)]="Feedback.companies.id">        
+                <option  *ngFor="let feed of userlis" [value]="feed.id" >   
+                      {{feed.name}}
+                      
+                </option>
+            </select> 
+      </div>
+    <div class="form-group"  >
+        <label>Content</label> 
+        <input type="text"  class="form-control" [(ngModel)]="Feedback.content" id="content" name="content">  
+  
+    </div>
+    <div class="form-group"  >
+        <label>date du feed Back</label> 
+        <input type="text"  class="form-control" [(ngModel)]="Feedback.dateFeedBack" id="date" name="dateFeedBack">  
+        <button  class="btn btn-success" type="submit">Save</button>
+    </div></td></tr>
+    </tbody> 
+   </table>
+  
+    <br>    
+    </form>
+  

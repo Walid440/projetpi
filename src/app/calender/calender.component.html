@@ -1,0 +1,21 @@
+
+<div  >
+    <table class="float-right "style="width: 50%; height: 5%; align-content: right;"> 
+<tr>
+    <td>
+     
+   <full-calendar [options]="calendarOptions"></full-calendar></td> </tr> </table>
+</div>
+   <ng-template #template >
+      <div class="modal-header" >
+        <h4 class="modal-title pull-left">Evenement</h4>
+        <button type="button" class="btn-close close pull-right" aria-label="Close" (click)="modalRef?.hide()">
+          <span aria-hidden="true" class="visually-hidden">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+l'evenement commencera {{start |date:'medium'}}      </div>
+    </ng-template>
+ 
+
+ 

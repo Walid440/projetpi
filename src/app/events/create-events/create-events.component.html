@@ -1,0 +1,44 @@
+
+<B><p style="text-align-last: center; color: blue;">create Evenement</B>
+    <form  (ngSubmit)="onSubmit()">
+          <div class="form-group">
+             <table class="table table-striped table-hover "  style="text-align-last: center;"  >
+         
+            <tbody>
+                
+    <tr>
+        <td style="width: 25%; height: 5%; align-content: right;"  ></td>
+       <td> 
+        <input type="text" style="width: 50%; height: 5%; align-content: center;" class="float-right" placeholder="Search...">
+
+            <label>User</label>
+
+              <select class="form-control form-control-lg" id="id" name="idUser" [(ngModel)]="idd">        
+                <option  *ngFor="let user of userlist1" [value]="user.id" >   
+                      {{user.id}}
+                      
+                </option>
+            </select>                     
+        
+        
+        <div class="form-group"   >
+            <label>title</label> 
+            <input type="text"  class="form-control" [(ngModel)]="Events.title" id="title" name="title" >  
+      
+        </div>
+        <div class="form-group"  >
+            <label>Start Events</label> 
+            <input type="text"  class="form-control" [(ngModel)]="Events.start" id="start" name="start" >  
+      
+        </div>
+        <div class="form-group"  >
+            <label>END Events</label> 
+            <input type="text"  class="form-control" [(ngModel)]="Events.end" id="end" name="end">  
+            
+        </div></td></tr>
+        </tbody> 
+       </table>
+       <br>  <p style="text-align-last: center;"> <button     class="btn btn-success" type="submit">Save</button></p>  
+    </div> 
+        </form>
+      
